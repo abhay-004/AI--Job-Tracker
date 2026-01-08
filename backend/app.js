@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import userRouter from "./routes/user.route.js";
+import jobRouter from "./routes/job.route.js";
 
 const app = express();
 
@@ -20,5 +21,6 @@ app.use(cookieParser());
 //api endpoints
 
 app.use("/api/v1/user", userRouter);
+app.use("/api/v1/jobs", jobRouter);
 
 export default app;
