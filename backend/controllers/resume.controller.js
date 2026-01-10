@@ -5,7 +5,6 @@ import cloudinary from "../utils/cloudinary.js";
 
 export const uploadResume = async (req, res) => {
   try {
-    console.log("file", req.file);
     if (!req.file) {
       return res
         .status(400)
