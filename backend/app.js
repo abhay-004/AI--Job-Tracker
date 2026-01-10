@@ -4,6 +4,7 @@ import cookieParser from "cookie-parser";
 import userRouter from "./routes/user.route.js";
 import jobRouter from "./routes/job.route.js";
 import analyticsRouter from "./routes/analytics.route.js";
+import resumeRouter from "./routes/resume.route.js";
 
 const app = express();
 
@@ -24,5 +25,6 @@ app.use(cookieParser());
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/jobs", jobRouter);
 app.use("/api/v1/analytics", analyticsRouter);
+app.use("/api/v1/resume", resumeRouter);
 
 export default app;
